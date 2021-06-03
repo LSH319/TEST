@@ -3,13 +3,18 @@ package LSH_Edu;
 import java.util.Scanner;
 
 public class Main {
+  
+  
   public static void main(String[] args) {
+	int menu = 0;
+	Temp_Change temp = new Temp_Change();
+	Sum_1to100 sum = new Sum_1to100();
 	Scanner scan = new Scanner(System.in);
 	
-	System.out.println("섭씨온도 : ");
-	double temp = scan.nextDouble(); 
-	Double Fahr = (temp * 1.8) + 32; //온도 변환공식 : (섭씨 * 1.8) + 32
-	
-	System.out.println("화씨온도 : " + Fahr);
+	System.out.println("1. 온도 변환\n2. 1부터 100까지 합");
+	System.out.print("메뉴선택 : ");
+	menu = scan.nextInt();
+	if (menu == 1) temp.temp_change();
+	else if (menu == 2) sum.sum();
   }
 }
