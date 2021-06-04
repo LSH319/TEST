@@ -9,7 +9,7 @@ public class Calculator {
     
     int subtract(int a, int b) {
     	if(a < b) {
-    		System.out.println("»¬¼À ¿À·ù 0 Ãâ·Â");
+    		System.out.println("Error return 0");
     		return 0;
     	}
     	return a-b;
