@@ -36,5 +36,8 @@ public class Main {
 	else if (menu == 9) caesar.trans();
 	else if (menu == 10) sBya.sum();
 	else if (menu == 11) calc.calculator();
+	
+	scan.close();
+	
   }
 }

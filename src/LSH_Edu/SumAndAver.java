@@ -15,5 +15,6 @@ public class SumAndAver {
 		}
 		aver = (double)sum/10;
 		System.out.print("«’∞Ë : "+sum+"\n∆Ú±’ : "+aver);
+		scan.close();
 	}
 }

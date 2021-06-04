@@ -15,5 +15,6 @@ public class Cal_Score {
 		else if(score >= 70) System.out.print("C");
 		else if(score >= 60) System.out.print("D");
 		else System.out.print("F");
+		scan.close();
 	}
 }

@@ -28,5 +28,6 @@ public class Caesar_Cipher {
         }
         
         System.out.print(arr);
+        scan.close();
 	}
 }

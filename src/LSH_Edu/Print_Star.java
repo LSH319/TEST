@@ -14,5 +14,6 @@ public class Print_Star {
 			}
 			System.out.println();
 		}
+		scan.close();
 	}
 }

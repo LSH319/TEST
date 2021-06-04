@@ -20,17 +20,21 @@ public class Calculator {
     }
     
     int divide(int a, int b) {
+    	if(b==0) {
+    		System.out.println("Error return 0");
+    		return 0;
+    	}
     	return a/b;
     }
     
     void calculator() {
     	Scanner scan = new Scanner(System.in);
-    	
     	int a = scan.nextInt();
     	while(true) {
     		String oper = scan.next();
     		if(oper.equals("=")) {
     			System.out.print(a);
+    			scan.close();
     			return;
     		}
     		int b = scan.nextInt();
@@ -46,10 +50,7 @@ public class Calculator {
     		}
     		else if(oper.equals("/")) {
     			a = divide(a,b);
-    		}
-    		
-    		
+    		}    
     	}
-    	
     }
 }

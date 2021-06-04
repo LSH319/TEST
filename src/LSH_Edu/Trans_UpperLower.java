@@ -22,5 +22,6 @@ public class Trans_UpperLower {
         }
         
         System.out.print(arr);
+        scan.close();
 	}
 }

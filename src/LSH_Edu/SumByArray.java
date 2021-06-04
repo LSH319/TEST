@@ -21,5 +21,6 @@ public class SumByArray {
 			sum = sum + input[i];
 		}
 		System.out.print("гу╟Х : "+ sum);
+		scan.close();
 	}
 }
