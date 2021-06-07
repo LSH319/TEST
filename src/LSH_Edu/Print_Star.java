@@ -10,6 +10,7 @@ public class Print_Star {
 		int num = scan.nextInt();
 		if(num <= 0 ) {
 			System.out.print("Wrong value");
+			scan.close();
 			return;
 		}
 		for(int i = 0;i < num; i++) {
