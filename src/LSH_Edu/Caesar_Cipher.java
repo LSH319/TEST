@@ -25,6 +25,11 @@ public class Caesar_Cipher {
             else if (120<=cipher[i] && cipher[i]<=122){
             	cipher[i]=(char)(cipher[i]-23);
            	}
+            else {
+            	System.out.print("Not string");
+            	scan.close();
+            	return;
+            }
         }
         
         System.out.print(cipher);
