@@ -3,31 +3,31 @@ package LSH_Edu;
 import java.util.Scanner;
 
 public class Caesar_Cipher {
-	void trans() {
+	void encryption() {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("문자열 입력 : ");
-        String input=scan.nextLine();
+        String target = scan.nextLine();
         
-        char[] arr;
-        arr= input.toCharArray();
+        char[] cipher;
+        cipher= target.toCharArray();
         
-        for(int i=0; i<arr.length; ++i){
-            if(65<=arr[i] && arr[i]<=87){
-                arr[i]=(char)(arr[i]+3);
+        for(int i=0; i<cipher.length; ++i){
+            if(65<=cipher[i] && cipher[i]<=87){
+            	cipher[i]=(char)(cipher[i]+3);
             }
-            else if(88<=arr[i] && arr[i]<=90){
-                arr[i]=(char)(arr[i]-23);
+            else if(88<=cipher[i] && cipher[i]<=90){
+            	cipher[i]=(char)(cipher[i]-23);
             }
-            else if (97<=arr[i] && arr[i]<=119){
-                arr[i]=(char)(arr[i]+3);
+            else if (97<=cipher[i] && cipher[i]<=119){
+            	cipher[i]=(char)(cipher[i]+3);
            	}
-            else if (120<=arr[i] && arr[i]<=122){
-                arr[i]=(char)(arr[i]-23);
+            else if (120<=cipher[i] && cipher[i]<=122){
+            	cipher[i]=(char)(cipher[i]-23);
            	}
         }
         
-        System.out.print(arr);
+        System.out.print(cipher);
         scan.close();
 	}
 }

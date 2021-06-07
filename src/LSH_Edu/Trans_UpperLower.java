@@ -3,7 +3,7 @@ package LSH_Edu;
 import java.util.Scanner;
 
 public class Trans_UpperLower {
-	void trans_UpperLower() {
+	void transUpperLower() {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("문자열 입력 : ");

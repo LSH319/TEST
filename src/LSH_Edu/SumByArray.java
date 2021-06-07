@@ -10,14 +10,14 @@ public class SumByArray {
 		int sum=0;
 		
 		System.out.print("입력할 숫자 개수 : ");
-		int num = scan.nextInt();
-		input = new int[num];
+		int length = scan.nextInt();
+		input = new int[length];
 		
-		for(int i = 0;i < num;i++) {
+		for(int i = 0;i < length;i++) {
 			input[i] = scan.nextInt();
 		}
 		
-		for(int i = 0;i < num; i++) {
+		for(int i = 0;i < length; i++) {
 			sum = sum + input[i];
 		}
 		System.out.print("합계 : "+ sum);

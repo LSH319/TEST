@@ -1,7 +1,7 @@
 package LSH_Edu;
 
 public class SumAndAverByArray {
-	void sumAndaver() {
+	void SumAndAverage() {
 		int[][] score = {{90,80,80},{85,85,95},{95,70,75},{80,80,90},{90,75,80}};
 		for(int i= 0;i < 5;i++) {
 			int sum=0;

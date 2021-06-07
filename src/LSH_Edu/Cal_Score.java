@@ -3,7 +3,7 @@ package LSH_Edu;
 import java.util.Scanner;
 
 public class Cal_Score {
-	void cal_Score() {
+	void calculationScore() {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("점수 입력 : ");

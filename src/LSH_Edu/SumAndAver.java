@@ -3,12 +3,13 @@ package LSH_Edu;
 import java.util.Scanner;
 
 public class SumAndAver {
-	void sum_Aver() {
+	void scoreSumAndAverage() {
 		Scanner scan = new Scanner(System.in);
+		
 		int sum = 0;
 		double aver;
 		
-		System.out.print("점수 : ");
+		System.out.print("10명의 점수 입력");
 		for(int i =0; i<10; i++) {
 			int score = scan.nextInt();
 			sum = sum + score;

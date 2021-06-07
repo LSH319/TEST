@@ -24,16 +24,15 @@ public class Main {
 	System.out.print("메뉴선택 : ");
 	menu = scan.nextInt();
 	
-	if (menu == 1) temp.temp_change();
+	if (menu == 1) temp.temperatureChange();
 	else if (menu == 2) sum.sum();
 	else if (menu == 3) times_t.print_All();
 	else if (menu == 4) print_s.print_All();
-	else if (menu == 5) cal_s.cal_Score();
-	else if (menu == 5) cal_s.cal_Score();
-	else if (menu == 6) sAnda.sum_Aver();
-	else if (menu == 7) sAndaBa.sumAndaver();
-	else if (menu == 8) trans_ul.trans_UpperLower();
-	else if (menu == 9) caesar.trans();
+	else if (menu == 5) cal_s.calculationScore();
+	else if (menu == 6) sAnda.scoreSumAndAverage();
+	else if (menu == 7) sAndaBa.SumAndAverage();
+	else if (menu == 8) trans_ul.transUpperLower();
+	else if (menu == 9) caesar.encryption();
 	else if (menu == 10) sBya.sum();
 	else if (menu == 11) calc.calculator();
 	
