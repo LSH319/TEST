@@ -17,7 +17,8 @@ public class Temp_Change {
 			System.out.println("wrong value");
 			return;
 		}
-		
-		scan.close();
+		finally {
+			scan.close();
+		}
 	}
 }
