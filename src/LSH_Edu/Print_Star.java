@@ -8,6 +8,10 @@ public class Print_Star {
 		
 		System.out.print("별표 개수 입력 : ");
 		int num = scan.nextInt();
+		if(num <= 0 ) {
+			System.out.print("Wrong value");
+			return;
+		}
 		for(int i = 0;i < num; i++) {
 			for(int j = 0; j <= i; j++) {
 				System.out.print("*");
