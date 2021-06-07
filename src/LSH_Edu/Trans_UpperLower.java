@@ -6,7 +6,7 @@ public class Trans_UpperLower {
 	void transUpperLower() {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("문자열 입력 : ");
+		System.out.print("input string : ");
         String input=scan.nextLine();
         
         char[] arr;
@@ -19,6 +19,7 @@ public class Trans_UpperLower {
             else if (97<=arr[i] && arr[i]<=122){
                 arr[i]=(char)(arr[i]-32);
            	}
+            else System.out.print("Not string");
         }
         
         System.out.print(arr);
