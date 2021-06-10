@@ -6,7 +6,7 @@ public class Caesar_Cipher {
 	void encryption() {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("문자열 입력: ");
+		System.out.print("문자열: ");
         String target = scan.nextLine();
         
         char[] cipher;

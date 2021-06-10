@@ -7,11 +7,11 @@ public class Cal_Score {
 	void calculationScore() {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ì ìˆ˜ :  ");
 		try {
 			int score = scan.nextInt();
 			
-			System.out.print("ÇÐÁ¡ : ");
+			System.out.print("í•™ì  : ");
 			if(score >= 90) System.out.print("A");
 			else if(score >= 80) System.out.print("B");
 			else if(score >= 70) System.out.print("C");

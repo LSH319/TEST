@@ -6,7 +6,7 @@ public class Print_Star {
 	void print_All() {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("º°Ç¥ °³¼ö ÀÔ·Â : ");
+		System.out.print("ë³„ ê°œìˆ˜ : ");
 		int num = scan.nextInt();
 		if(num <= 0 ) {
 			System.out.print("Wrong value");

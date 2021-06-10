@@ -9,7 +9,7 @@ public class SumAndAver {
 		int sum = 0;
 		double aver;
 		
-		System.out.print("10¸íÀÇ Á¡¼ö ÀÔ·Â : ");
+		System.out.print("10ê°œ ìˆ«ì ì…ë ¥: ");
 		
 		scan = new Scanner(scan.next()).useDelimiter("\\s*,\\s*");
 		for(int i =0; i<10; i++) {
@@ -18,7 +18,7 @@ public class SumAndAver {
 		}
 		
 		aver = (double)sum/10;
-		System.out.print("ÇÕ°è : "+sum+"\nÆò±Õ : "+aver);
+		System.out.print("í•© : "+sum+"\ní‰ê·  : "+aver);
 		scan.close();
 	}
 }

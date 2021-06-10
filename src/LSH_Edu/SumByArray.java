@@ -10,7 +10,7 @@ public class SumByArray {
 		int[] input;
 		int sum=0;
 		
-		System.out.print("ÀÔ·ÂÇÒ ¼ıÀÚ °³¼ö : ");
+		System.out.print("ìˆ«ì ê°œìˆ˜ ì…ë ¥ : ");
 		try {
 			int length = scan.nextInt();
 			input = new int[length];
@@ -22,7 +22,7 @@ public class SumByArray {
 			for(int i = 0;i < length; i++) {
 				sum = sum + input[i];
 			}
-			System.out.print("ÇÕ°è : "+ sum);
+			System.out.print("í•©ê³„ : "+ sum);
 		}
 		catch(InputMismatchException e) {
 			System.out.println("wrong value");

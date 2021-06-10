@@ -8,7 +8,7 @@ public class SumAndAverByArray {
 			for(int j = 0;j < 3;j++) {
 				sum = sum + score[i][j];
 			}
-			System.out.printf("ID=%d : ÇÕ°è=%d Æò±Õ=%f\n",i,sum,(double)sum/3);
+			System.out.printf("ID=%d : í•©ê³„ =%d í‰ê·  =%f\n",i,sum,(double)sum/3);
 		}
 	}
 }
