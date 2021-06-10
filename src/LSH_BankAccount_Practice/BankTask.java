@@ -10,28 +10,28 @@ public class BankTask {
 	public void makeAccount(ArrayList<BankAccount> bankAccount) {
 		
 		
-		System.out.println("ÀÌ¸§ : ");
+		System.out.println("ì´ë¦„ : ");
 		String Name = scan.nextLine();
-		System.out.println("°èÁÂ¹øÈ£ : ");
+		System.out.println("ê³„ì¢Œë²ˆí˜¸ : ");
 		String Account = scan.nextLine();
 		
 		bankAccount.add(new BankAccount(Name,Account));
 	}
 	
 	public void depositAndwithdrawal(ArrayList<BankAccount> bankAccount,int menu) {
-		System.out.print("°èÁÂ¹øÈ£ ÀÔ·Â : ");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸ : ");
 		String account = scan.nextLine();
 		if(account.equals("")) account = scan.nextLine();
 		for(BankAccount bankaccount : bankAccount) {
 			if(bankaccount.Account.equals(account)) {
-				System.out.print("±İ¾× : ");
+				System.out.print("ê¸ˆì•¡ : ");
 				int amount = scan.nextInt();
 				if(menu == 2) bankaccount.deposit(amount);
 				else if(menu == 3) bankaccount.withdraw(amount);
 				return;
 			}
 		}
-		System.out.print("¾ø´Â°èÁÂ\n");
+		System.out.print("ì—†ëŠ” ê³„ì¢Œë²ˆí˜¸\n");
 	}
 	
 	public void printAllAccount(ArrayList<BankAccount> bankAccount) {

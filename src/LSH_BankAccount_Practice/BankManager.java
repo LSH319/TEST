@@ -19,7 +19,7 @@ class BankAccount{
 	}
 	public void withdraw(int amount) {
 		if(this.balance < amount) {
-			System.out.println("Ãâ±İ¾×Àº ÀÜ¾×À» ³Ñ±æ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì¶œê¸ˆì•¡ì€ ì”ì•¡ì„ ë„˜ê¸¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		else {
 			this.balance = this.balance - amount;
@@ -55,7 +55,7 @@ public class BankManager {
 		
 		ArrayList<BankAccount> bankAccount = new ArrayList<BankAccount>();
 		while(true) {
-			System.out.println("0. Á¾·á \n1. °èÁÂ°³¼³ \n2. ÀÔ±İ \n3. Ãâ±İ\n4. ¸ğµç°èÁÂÃâ·Â");
+			System.out.println("0.ì¢…ë£Œ  \n1. ê³„ì¢Œê°œì„¤ \n2. ì…ê¸ˆ \n3. ì¶œê¸ˆ\n4. ì „ ê³„ì¢Œ ì¡°íšŒ");
 			int num = scan.nextInt();
 			
 			if(num == 1) {
