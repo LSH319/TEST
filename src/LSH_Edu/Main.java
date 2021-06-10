@@ -7,9 +7,9 @@ public class Main {
   
   public static void main(String[] args) {
 	int menu = 0;
+	Scanner scan = new Scanner(System.in);
 	Temp_Change temp = new Temp_Change();
 	Sum_1to100 sum = new Sum_1to100();
-	Scanner scan = new Scanner(System.in);
 	Times_Table times_t = new Times_Table();
 	Print_Star print_s = new Print_Star();
 	Cal_Score cal_s = new Cal_Score();
@@ -20,8 +20,8 @@ public class Main {
 	SumByArray sBya = new SumByArray();
 	Calculator calc = new Calculator();
 	
-	System.out.println("1. ¿Âµµ º¯È¯\n2. 1ºÎÅÍ 100±îÁö ÇÕ\n3. ±¸±¸´Ü Ãâ·Â\n4. º°Ç¥ Ãâ·Â\n5. ÇĞÁ¡ °è»ê\n6. ÇÕ°è¿Í Æò±Õ\n7. ÇÕ°è¿Í Æò±Õ2\n8. ´ë¼Ò¹®ÀÚ º¯°æ/n9. Ä«ÀÌ»ç¸£ º¯È¯\n10. ¹è¿­À» ÅëÇÑ µ¡¼À\n11. »çÄ¢¿¬»ê");
-	System.out.print("¸Ş´º¼±ÅÃ : ");
+	System.out.println("1. ì˜¨ë„ ë³€í™˜\n2. 1ë¶€í„° 100ê¹Œì§€ í•©\n3. êµ¬êµ¬ë‹¨ ì¶œë ¥\n4. ë³„í‘œ ì¶œë ¥\n5. í•™ì  ê³„ì‚°\n6. í•©ê³„ì™€ í‰ê· \n7. í•©ê³„ì™€ í‰ê· 2\n8. ëŒ€ì†Œë¬¸ì ë³€ê²½/n9. ì¹´ì´ì‚¬ë¥´ ë³€í™˜\n10. ë°°ì—´ì„ í†µí•œ ë§ì…ˆ\n11. ì‚¬ì¹™ì—°ì‚°");
+	System.out.print("ë©”ë‰´ì„ íƒ : ");
 	menu = scan.nextInt();
 	
 	if (menu == 1) temp.temperatureChange();

@@ -6,7 +6,7 @@ public class Caesar_Cipher {
 	void encryption() {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("¹®ÀÚ¿­ ÀÔ·Â : ");
+		System.out.print("ë¬¸ìì—´ ì…ë ¥: ");
         String target = scan.nextLine();
         
         char[] cipher;
