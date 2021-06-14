@@ -23,30 +23,41 @@ public class Main {
 				"1. 온도 변환\n2. 1부터 100까지 합\n3. 구구단 출력\n4. 별표 출력\n5. 학점 계산\n6. 합계와 평균\n7. 합계와 평균2\n8. 대소문자 변경/n9. 카이사르 변환\n10. 배열을 통한 덧셈\n11. 사칙연산");
 		System.out.print("메뉴선택 : ");
 		menu = scan.nextInt();
-
-		if (menu == 1)
+		switch (menu) {
+		case 1:
 			temp.temperatureChange();
-		else if (menu == 2)
+			break;
+		case 2:
 			sum.sum();
-		else if (menu == 3)
+			break;
+		case 3:
 			times_t.print_All();
-		else if (menu == 4)
+			break;
+		case 4:
 			print_s.print_All();
-		else if (menu == 5)
+			break;
+		case 5:
 			cal_s.calculationScore();
-		else if (menu == 6)
+			break;
+		case 6:
 			sAnda.scoreSumAndAverage();
-		else if (menu == 7)
+			break;
+		case 7:
 			sAndaBa.SumAndAverage();
-		else if (menu == 8)
+			break;
+		case 8:
 			trans_ul.transUpperLower();
-		else if (menu == 9)
-			caesar.encryption();
-		else if (menu == 10)
+			break;
+		case 9:
+			caesar.transEncryption();
+			break;
+		case 10:
 			sBya.sum();
-		else if (menu == 11)
+			break;
+		case 11:
 			calc.calculator();
-
+			break;
+		}
 		scan.close();
 
 	}

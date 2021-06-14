@@ -3,11 +3,11 @@ package LSH_Edu;
 import java.util.Scanner;
 
 public class CaesarCipher {
-	void encryption() {
-		Scanner scan = new Scanner(System.in);
+	void transEncryption() {
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("문자열: ");
-		String target = scan.nextLine();
+		String target = scanner.nextLine();
 
 		char[] cipher;
 		cipher = target.toCharArray();
@@ -23,12 +23,12 @@ public class CaesarCipher {
 				cipher[i] = (char) (cipher[i] - 23);
 			} else {
 				System.out.print("Not string");
-				scan.close();
+				scanner.close();
 				return;
 			}
 		}
 
 		System.out.print(cipher);
-		scan.close();
+		scanner.close();
 	}
 }
