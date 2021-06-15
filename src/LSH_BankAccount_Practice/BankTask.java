@@ -2,10 +2,13 @@ package LSH_BankAccount_Practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class BankTask {
-	ArrayList<BankAccount> bankAccounts = new ArrayList<BankAccount>();
+	Map<String, BankAccount> bankAccounts = new HashMap<>();
 	private Scanner scanner = new Scanner(System.in);
 	private TaskMenu taskMenu = new TaskMenu();
 
@@ -17,7 +20,7 @@ public class BankTask {
 		String accountId = Integer.toString(this.bankAccounts.size() + 1);
 		System.out.println("당신의 계좌번호 : " + accountId);
 
-		this.bankAccounts.add(new BankAccount(inputName, accountId));
+		this.bankAccounts.put(accountId, new BankAccount(inputName));
 	}
 
 	public void depositAndWithdrawal(final int menu) {
@@ -27,25 +30,26 @@ public class BankTask {
 		if (inputAccountId.equals(""))
 			inputAccountId = scanner.nextLine();
 
-		for (BankAccount bankAccount : this.bankAccounts) {
-			if (bankAccount.getAccountId().equals(inputAccountId)) {
-				System.out.print("금액 : ");
-				int amount = scanner.nextInt();
-				if (menu == taskMenu.deposit)
-					bankAccount.deposit(amount);
-				else if (menu == taskMenu.withdraw)
-					bankAccount.withdraw(amount);
-				return;
-			}
+		if (!this.bankAccounts.containsKey(inputAccountId)) {
+			System.out.print("계좌번호 오류\n");
+			return;
 		}
 
-		System.out.print("없는 계좌번호\n");
+		BankAccount bankAccount = this.bankAccounts.get(inputAccountId);
+		System.out.print("금액 : ");
+		int amount = scanner.nextInt();
+		if (menu == taskMenu.deposit)
+			bankAccount.deposit(amount);
+		else if (menu == taskMenu.withdraw)
+			bankAccount.withdraw(amount);
 	}
 
 	public void printAllBankAccounts() {
 		System.out.println("이름  계좌번호  잔액");
-		for (BankAccount bankAccount : this.bankAccounts) {
-			System.out.println(bankAccount.getName() + " " + bankAccount.getAccountId() + " " + bankAccount.getBalance());
+		Set<String> accountIds = this.bankAccounts.keySet();
+		for (String accountId : accountIds) {
+			System.out.println(this.bankAccounts.get(accountId).getName() + " " + accountId + " "
+					+ this.bankAccounts.get(accountId).getBalance());
 		}
 	}
 
@@ -56,41 +60,39 @@ public class BankTask {
 		if (inputAccountId.equals(""))
 			inputAccountId = scanner.nextLine();
 
-		for (BankAccount bankAccount : this.bankAccounts) {
-			if (bankAccount.getAccountId().equals(inputAccountId)) {
-				for (String[] log : bankAccount.getLog()) {
-					System.out.printf("%s %s %s\n", log[0], log[1], log[2]);
-				}
-			}
+		if (!bankAccounts.containsKey(inputAccountId)) {
+			System.out.print("계좌번호 오류\n");
+			return;
+		}
+
+		for (String[] accountLog : bankAccounts.get(inputAccountId).getLog()) {
+			System.out.printf("%s %s %s\n", accountLog[0], accountLog[1], accountLog[2]);
 		}
 	}
 
 	public void bankTransfer() {
 		System.out.print("출금 계좌번호 : ");
 		String inputWithdrawalBankAccountId = scanner.nextLine();
-
 		if (inputWithdrawalBankAccountId.equals(""))
 			inputWithdrawalBankAccountId = scanner.nextLine();
-
-		for (BankAccount withdrawalBankAccount : this.bankAccounts) {
-			if (withdrawalBankAccount.getAccountId().equals(inputWithdrawalBankAccountId)) {
-				System.out.print("입금 계좌번호 : ");
-				String inputDepositAccountId = scanner.nextLine();
-
-				if (inputDepositAccountId.equals(""))
-					inputDepositAccountId = scanner.nextLine();
-
-				for (BankAccount depositBankAccount : this.bankAccounts) {
-					if (depositBankAccount.getAccountId().equals(inputDepositAccountId)) {
-						System.out.print("금액 : ");
-						int amount = scanner.nextInt();
-						withdrawalBankAccount.withdraw(amount);
-						depositBankAccount.deposit(amount);
-						return;
-					}
-				}
-				System.out.println("계좌번호 오류");
-			}
+		if (!bankAccounts.containsKey(inputWithdrawalBankAccountId)) {
+			System.out.print("출금 계좌번호 오류\n");
+			return;
 		}
+
+		System.out.print("입금 계좌번호 : ");
+		String inputDepositAccountId = scanner.nextLine();
+		if (inputDepositAccountId.equals(""))
+			inputDepositAccountId = scanner.nextLine();
+		if (!bankAccounts.containsKey(inputDepositAccountId)) {
+			System.out.print("입금 계좌번호 오류\n");
+			return;
+		}
+
+		System.out.print("금액 : ");
+		int amount = scanner.nextInt();
+		bankAccounts.get(inputWithdrawalBankAccountId).withdraw(amount);
+		if (bankAccounts.get(inputWithdrawalBankAccountId).getBalance() > amount)
+			bankAccounts.get(inputDepositAccountId).deposit(amount);
 	}
 }
