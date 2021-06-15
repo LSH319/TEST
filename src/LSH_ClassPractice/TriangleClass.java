@@ -4,22 +4,22 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Triangle {
-	private int first_side;
-	private int second_side;
-	private int third_side;
+	private int firstSide;
+	private int secondSide;
+	private int thirdSide;
 
-	Triangle(int first, int second, int third) {
-		this.first_side = first;
-		this.second_side = second;
-		this.third_side = third;
+	Triangle(int inputFirstNumber, int inputSecondNumber, int inputThirdNumber) {
+		this.firstSide = inputFirstNumber;
+		this.secondSide = inputSecondNumber;
+		this.thirdSide = inputThirdNumber;
 	}
 
 	void drawTriangle() {
-		System.out.printf("Draw<%d,%d,%d>\n", this.first_side, this.second_side, this.third_side);
+		System.out.printf("Draw<%d,%d,%d>\n", this.firstSide, this.secondSide, this.thirdSide);
 	}
 
 	int getRound() {
-		return this.first_side + this.second_side + this.third_side;
+		return this.firstSide + this.secondSide + this.thirdSide;
 	}
 }
 
@@ -30,10 +30,10 @@ public class TriangleClass {
 		System.out.println("세 변의 길이 입력");
 		scanner = new Scanner(scanner.next()).useDelimiter("\\s*,\\s*");
 		try {
-			int first = scanner.nextInt();
-			int second = scanner.nextInt();
-			int third = scanner.nextInt();
-			Triangle triangle = new Triangle(first, second, third);
+			int inputFirstNumber = scanner.nextInt();
+			int inputSecondNumber = scanner.nextInt();
+			int inputThirdNumber = scanner.nextInt();
+			Triangle triangle = new Triangle(inputFirstNumber, inputSecondNumber, inputThirdNumber);
 			triangle.drawTriangle();
 			System.out.println("삼각형 둘레의 길이 : " + triangle.getRound());
 		} catch (InputMismatchException e) {
