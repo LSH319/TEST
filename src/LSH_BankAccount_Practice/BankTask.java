@@ -14,13 +14,13 @@ public class BankTask {
 		System.out.println("이름 : ");
 		String inputName = scanner.nextLine();
 
-		String account = Integer.toString(this.bankAccounts.size() + 1);
-		System.out.println("당신의 계좌번호 : " + account);
+		String accountId = Integer.toString(this.bankAccounts.size() + 1);
+		System.out.println("당신의 계좌번호 : " + accountId);
 
-		this.bankAccounts.add(new BankAccount(inputName, account));
+		this.bankAccounts.add(new BankAccount(inputName, accountId));
 	}
 
-	public void depositAndWithdrawal(int menu) {
+	public void depositAndWithdrawal(final int menu) {
 		System.out.print("계좌번호 : ");
 		String inputAccountId = scanner.nextLine();
 

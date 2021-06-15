@@ -14,11 +14,11 @@ class Triangle {
 		this.thirdSide = inputThirdNumber;
 	}
 
-	void drawTriangle() {
+	public void drawTriangle() {
 		System.out.printf("Draw<%d,%d,%d>\n", this.firstSide, this.secondSide, this.thirdSide);
 	}
 
-	int getRound() {
+	public int getRound() {
 		return this.firstSide + this.secondSide + this.thirdSide;
 	}
 }
