@@ -4,13 +4,11 @@ import java.util.ArrayList;
 
 class BankAccount {
 	private String name;
-	private String accountId;
 	private int balance = 0;
 	private ArrayList<String[]> log = new ArrayList<String[]>();
 
-	BankAccount(String name, String accountId) {
+	BankAccount(String name) {
 		this.name = name;
-		this.accountId = accountId;
 	}
 
 	public void deposit(int amount) {
@@ -41,14 +39,6 @@ class BankAccount {
 		this.name = name;
 	}
 
-	public String getAccountId() {
-		return this.accountId;
-	}
-
-	public void setAccountId(String accountId) {
-		this.accountId = accountId;
-	}
-
 	public int getBalance() {
 		return balance;
 	}
@@ -56,8 +46,8 @@ class BankAccount {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	
-	public ArrayList<String[]> getLog(){
+
+	public ArrayList<String[]> getLog() {
 		return this.log;
 	}
 }
